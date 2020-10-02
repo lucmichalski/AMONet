@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Organization",
+    "description": "An organization such as a school, NGO, corporation, club, etc.",
+    "$comment": "Atom",
+    "type": "object",
+    "properties": {
+        "legalName": {
+            "$id": "#/properties/legalName",
+            "description": "Official name of the organization, e.g., the registered company name.",
+            "type": "string",
+            "examples": ["Google LLC"]
+        },
+        "description": {
+            "$id": "#/properties/description",
+            "description": "Description of the organization.",
+            "type": "string",
+            "examples": ["Google LLC is an United States based multinational technology company that specializes in Internet-related services and products."]
+        },
+        "name": {
+            "$id": "#/properties/name",
+            "type": "string",
+            "examples": ["Google"]
+        },
+        "rawData": {
+            "$id": "#/properties/rawData",
+            "type": "string",
+            "examples": ["google"]
+        },
+        "nodeId": {"$ref": "Base#/definitions/nodeId"},
+        "timestamp": {"$ref": "Base#/definitions/timestamp"},
+        "schemaVersion": {"$ref": "Base#/definitions/schemaVersion"}
+    },
+    "additionalProperties": false,
+    "required": [
+        "name",
+        "rawData",
+        "timestamp",
+        "schemaVersion",
+        "nodeId"
+    ]
+}

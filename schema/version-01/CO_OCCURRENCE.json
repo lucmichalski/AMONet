@@ -1,0 +1,46 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Co-occurrence",
+    "description": "Co-occurrence relationship.",
+    "type": "object",
+    "properties": {
+        "similarity": {
+            "$id": "#/properties/similarity",
+            "$comment": "Similarity score.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "examples": [0.35]
+        },
+        "weight": {
+            "$id": "#/properties/weight",
+            "$comment": "Edge weight.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "examples": [0.35]
+        },
+        "loopViolation": {
+            "$id": "#/definitions/loopViolation",
+            "description": "Whether or not LOOP uniqueness condition is violated.",
+            "type": "boolean",
+            "default": false
+        },
+        "cyclesCount": {"$ref": "Base#/definitions/count"},
+        "count": {"$ref": "Base#/definitions/count"},
+        "timestamp": {"$ref": "Base#/definitions/timestamp"},
+        "schemaVersion": {"$ref": "Base#/definitions/schemaVersion"},
+        "verified": {"$ref": "Base#/definitions/verified"}
+    },
+    "additionalProperties": false,
+    "required": [
+        "loopViolation",
+        "cyclesCount",
+        "count",
+        "similarity",
+        "timestamp",
+        "schemaVersion",
+        "verified",
+        "weight"
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Hash Value",
+    "description": "SHA256 checksum/hash value of file (defined in FIPS 180-2).",
+    "$comment": "Atom",
+    "type": "object",
+    "properties": {
+        "hashValue": {
+            "$id": "#/properties/hashValue",
+            "type": "string"
+        },
+        "nodeId": {
+            "$ref": "Base#/definitions/nodeId"
+        },
+        "timestamp": {
+            "$ref": "Base#/definitions/timestamp"
+        },
+        "schemaVersion": {
+            "$ref": "Base#/definitions/schemaVersion"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "hashValue",
+        "timestamp",
+        "schemaVersion",
+        "nodeId"
+    ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "User Account",
+  "description": "User account on a platform.",
+  "$comment": "Organism",
+  "type": "object",
+  "properties": {
+    "private": {
+      "$id": "#/properties/private",
+      "description": "Whether or not the user account is private.",
+      "type": "boolean",
+      "default": false
+    },
+    "verifiedByPlatform": {
+      "$id": "#/properties/verifiedByPlatform",
+      "description": "Whether or not the user has been verified by the platform provider.",
+      "type": "boolean",
+      "default": false
+    },
+    "followersCount": { "$ref": "Base#/definitions/count" },
+    "followingCount": { "$ref": "Base#/definitions/count" },
+    "dateTimeJoined": { "$ref": "Base#/definitions/timestamp" },
+    "likesCount": { "$ref": "Base#/definitions/count" },
+    "mediaCount": { "$ref": "Base#/definitions/count" },
+    "postingsCount": { "$ref": "Base#/definitions/count" },
+    "timestamp": { "$ref": "Base#/definitions/timestamp" },
+    "id": { "$ref": "Base#/definitions/id" },
+    "platform": { "$ref": "Base#/definitions/platform" },
+    "schemaVersion": { "$ref": "Base#/definitions/schemaVersion" },
+    "nodeId": { "$ref": "Base#/definitions/nodeId" },
+    "url": { "$ref": "Base#/definitions/iri" }
+  },
+  "additionalProperties": false,
+  "required": ["id", "platform", "timestamp", "schemaVersion", "nodeId"]
+}

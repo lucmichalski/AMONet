@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Person",
+    "description": "Real Person (not fictional).",
+    "$comment": "Atom",
+    "type": "object",
+    "properties": {
+        "familyName": {
+            "$id": "#/properties/familyName",
+            "description": "Last name of person.",
+            "type": "string",
+            "examples": [
+                "doe",
+                "Miller"
+            ]
+        },
+        "givenName": {
+            "$id": "#/properties/givenName",
+            "description": "First name of person.",
+            "type": "string",
+            "examples": [
+                "john",
+                "Dean"
+            ]
+        },
+        "title": {
+            "$id": "#/properties/title",
+            "type": "string",
+            "examples": ["Mr.", "Prof."]
+        },
+        "rawData": {
+            "$id": "#/properties/rawData",
+            "type": "string",
+            "examples": ["J. Doe"]
+        },
+        "nodeId": {"$ref": "Base#/definitions/nodeId"},
+        "timestamp": {"$ref": "Base#/definitions/timestamp"},
+        "schemaVersion": {"$ref": "Base#/definitions/schemaVersion"}
+    },
+    "additionalProperties": false,
+    "required": [
+        "familyName",
+        "givenName",
+        "rawData",
+        "timestamp",
+        "schemaVersion",
+        "nodeId"
+    ]
+}

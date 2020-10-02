@@ -1,0 +1,74 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Media",
+    "description": "Media in general (images, audio, video or animations).",
+    "$comment": "Molecule",
+    "type": "object",
+    "properties": {
+        "exifData": {
+            "$id": "#/properties/exifData",
+            "description": "Exif data of item.",
+            "type": "string"
+        },
+        "format": {
+            "$id": "#/properties/format",
+            "description": "Encoding format of media.",
+            "type": "string",
+            "enum": ["odt", "sh", "tif", "swift", "csv", "part", "avi", "ico", "mpeg", "docx", "odp", "emlx", "rss", "m4v", "mp4", "js", "fnt", "mp3", "class", "doc", "ogg", "msg", "cs", "arj", "cgi", "7z", "ttf", "oft", "jsp", "3gp", "pl", "html", "cpp", "h", "midi", "dmg", "fon", "asp", "cda", "bin", "cab", "flv", "ai", "pst", "c", "ini", "tar", "sql", "mpg", "cfg", "htm", "xls", "vcf", "dat", "exe", "sys", "com", "pptx", "ppt", "apk", "icns", "otf", "pdf", "ps", "gadget", "vob", "tiff", "mov", "tar.gz", "php", "jpeg", "aif", "java", "swf", "3g2", "wmv", "mpa", "lnk", "aspx", "dbf", "ost", "mid", "jar", "wav", "png", "xlsm", "cfm", "deb", "drv", "tmp", "cur", "sav", "z", "h264", "rar", "eml", "wma", "msi", "rtf", "wsf", "bmp", "vcd", "gif", "xml", "dll", "jpg", "pkg", "css", "psd", "txt", "mdb", "vb", "bat", "pps", "wpd", "cpl", "email", "xlsx", "zip", "bak", "cer", "svg", "db", "rm", "wpl", "py", "rpm", "ods", "iso", "xhtml", "tex", "toast", "log", "mkv", "dmp", "key"]
+        },
+        "height": {
+            "$id": "#/properties/width",
+            "description": "Size in pixels.",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "profileImage": {
+            "$id": "#/properties/profileImage",
+            "description": "Whether or not the media/image is a user account profile image.",
+            "type": "boolean",
+            "default": false
+        },
+        "profileBackgroundImage": {
+            "$id": "#/properties/profileBackgroundImage",
+            "description": "Whether or not the media/image is a profile background image.",
+            "type": "boolean",
+            "default": false
+        },
+        "thumbnail": {
+            "$id": "#/properties/thumbnail",
+            "description": "Whether or not the media/image is a thumbnail image for another image or video.",
+            "type": "boolean",
+            "default": false
+        },
+        "type": {
+            "$id": "#/properties/type",
+            "description": "Type of media.",
+            "type": "string",
+            "enum": ["audio", "video", "image", "animation"],
+            "examples": ["audio"]
+        },
+        "width": {
+            "$id": "#/properties/width",
+            "description": "Size in pixels.",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "caption": {
+            "$id": "#/properties/caption",
+            "type": "string"
+        },
+        "datePublished": {"$ref": "Base#/definitions/timestamp"},
+        "url": {"$ref": "Base#/definitions/iri"},
+        "nodeId": {"$ref": "Base#/definitions/nodeId"},
+        "timestamp": {"$ref": "Base#/definitions/timestamp"},
+        "schemaVersion": {"$ref": "Base#/definitions/schemaVersion"}
+    },
+    "additionalProperties": false,
+    "required": [
+        "url",
+        "type",
+        "timestamp",
+        "schemaVersion",
+        "nodeId"
+    ]
+}

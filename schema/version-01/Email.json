@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Email",
+    "description": "Email address.",
+    "$comment": "Atom",
+    "type": "object",
+    "properties": {
+        "email": {
+            "$id": "#/properties/email",
+            "$comment": "Format has to be in line with RFC 5322, section 3.4.1.",
+            "type": "string",
+            "format": "idn-email",
+            "examples": ["j.doe@mail.com"]
+        },
+        "nodeId": {"$ref": "Base#/definitions/nodeId"},
+        "timestamp": {"$ref": "Base#/definitions/timestamp"},
+        "schemaVersion": {"$ref": "Base#/definitions/schemaVersion"}
+    },
+    "additionalProperties": false,
+    "required": [
+        "email",
+        "timestamp",
+        "schemaVersion",
+        "nodeId"
+    ]
+}

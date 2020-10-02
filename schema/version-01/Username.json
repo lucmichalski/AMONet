@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Username",
+    "description": "Username (belonging to UserAccount).",
+    "$comment": "Atom",
+    "type": "object",
+    "properties": {
+        "username": {
+            "$id": "#/properties/username",
+            "type": "string",
+            "examples": ["j_doe"]
+        },
+        "timestamp": {"$ref": "Base#/definitions/timestamp"},
+        "nodeId": {"$ref": "Base#/definitions/nodeId"},
+        "schemaVersion": {"$ref": "Base#/definitions/schemaVersion"}
+    },
+    "additionalProperties": false,
+    "required": [
+        "username",
+        "timestamp",
+        "schemaVersion",
+        "nodeId"
+    ]
+}

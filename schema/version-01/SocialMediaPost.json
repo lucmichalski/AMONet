@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Social Media Post",
+    "description": "Post on a social media platform (blog post, tweet, Facebook post, etc.).",
+    "$comment": "Organism",
+    "type": "object",
+    "properties": {
+        "type": {
+            "$id": "#/properties/type",
+            "description": "Type of node in the social graph.",
+            "$comment": "Share: retweet, repost. Original: initial posting. Reply: also use for comment.",
+            "type": "string",
+            "enum": ["original", "reply", "share"]
+        },
+        "commentsCount": {"$ref": "Base#/definitions/count"},
+        "likesCount": {"$ref": "Base#/definitions/count"},
+        "repliesCount": {"$ref": "Base#/definitions/count"},
+        "sharesCount": {"$ref": "Base#/definitions/count"},
+        "datePublished": {"$ref": "Base#/definitions/timestamp"},
+        "timestamp": {"$ref": "Base#/definitions/timestamp"},
+        "id": {"$ref": "Base#/definitions/id"},
+        "platform": {"$ref": "Base#/definitions/platform"},
+        "schemaVersion": {"$ref": "Base#/definitions/schemaVersion"},
+        "url": {"$ref": "Base#/definitions/iri"},
+        "nodeId": {"$ref": "Base#/definitions/nodeId"}
+    },
+    "additionalProperties": false,
+    "dependencies": {
+        "id": ["platform"],
+        "platform": ["id"]
+    },
+    "required": [
+        "id",
+        "platform",
+        "url",
+        "timestamp",
+        "schemaVersion",
+        "nodeId"
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Keyword",
+    "description": "Keyword describing content.",
+    "$comment": "Atom",
+    "type": "object",
+    "properties": {
+        "keyword": {
+            "$id": "#/properties/keyword",
+            "type": "string",
+            "pattern": "^#[\\S]+$",
+            "examples": ["#OSINT"]
+        },
+        "nodeId": {"$ref": "Base#/definitions/nodeId"},
+        "timestamp": {"$ref": "Base#/definitions/timestamp"},
+        "schemaVersion": {"$ref": "Base#/definitions/schemaVersion"}
+    },
+    "additionalProperties": false,
+    "required": [
+        "keyword",
+        "timestamp",
+        "schemaVersion",
+        "nodeId"
+    ]
+}

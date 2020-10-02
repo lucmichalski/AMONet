@@ -1,0 +1,15 @@
+{
+  "Domain": {
+    "IpAddress": ["networkSocket"]
+  },
+  "Username": {},
+  "IpAddress": {
+    "Location": ["ipinfoIo"]
+  },
+  "Email": {},
+  "Location": {},
+  "Person": {},
+  "Phone": {},
+  "Keyword": {},
+  "Organization": {}
+}

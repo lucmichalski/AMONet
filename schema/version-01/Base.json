@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "Base",
+    "title": "Base",
+    "description": "Definitions of basic properties for reuse in other data types.",
+    "type": "object", 
+    "definitions": {
+        "count": {
+            "$id": "#/properties/count",
+            "type": "integer",
+            "minimum": 0
+        },
+        "country": {
+            "$id": "#/definitions/country",
+            "$comment": "ISO 3166 alpha-2 country code has to be used.",
+            "type": "string",
+            "enum": ["AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU", "CV", "CW", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KP", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "ZA", "ZM", "ZW"],
+            "examples": ["DE"]
+        },
+        "nodeId": {
+            "$id": "#/definitions/nodeId",
+            "description": "ID (hash value) used for uniqueness constraint on node.",
+            "type": "string"
+        },
+        "id": {
+            "$id": "#/definitions/id",
+            "description": "Unique identifier (depending on platform).",
+            "type": "string",
+            "examples": ["122827623449344768"]
+        },
+        "inLanguage": {
+            "$id": "#/definitions/inLanguage",
+            "description": "Language of the content.",
+            "$comment": "ISO 639 language code has to be used.",
+            "type": "string",
+            "enum": ["aa" ,"ab" ,"ae" ,"af" ,"ak" ,"am" ,"an" ,"ar" ,"as" ,"av" ,"ay" ,"az" ,"ba" ,"be" ,"bg" ,"bh" ,"bi" ,"bm" ,"bn" ,"bo" ,"br" ,"bs" ,"ca" ,"ce" ,"ch" ,"co" ,"cr" ,"cs" ,"cu" ,"cv" ,"cy" ,"da" ,"de" ,"dv" ,"dz" ,"ee" ,"el" ,"en" ,"eo" ,"es" ,"et" ,"eu" ,"fa" ,"ff" ,"fi" ,"fj" ,"fo" ,"fr" ,"fy" ,"ga" ,"gd" ,"gl" ,"gn" ,"gu" ,"gv" ,"ha" ,"he" ,"hi" ,"ho" ,"hr" ,"ht" ,"hu" ,"hy" ,"hz" ,"ia" ,"id" ,"ie" ,"ig" ,"ii" ,"ik" ,"io" ,"is" ,"it" ,"iu" ,"ja" ,"jv" ,"ka" ,"kg" ,"ki" ,"kj" ,"kk" ,"kl" ,"km" ,"kn" ,"ko" ,"kr" ,"ks" ,"ku" ,"kv" ,"kw" ,"ky" ,"la" ,"lb" ,"lg" ,"li" ,"ln" ,"lo" ,"lt" ,"lu" ,"lv" ,"mg" ,"mh" ,"mi" ,"mk" ,"ml" ,"mn" ,"mr" ,"ms" ,"mt" ,"my" ,"na" ,"nb" ,"nd" ,"ne" ,"ng" ,"nl" ,"nn" ,"no" ,"nr" ,"nv" ,"ny" ,"oc" ,"oj" ,"om" ,"or" ,"os" ,"pa" ,"pi" ,"pl" ,"ps" ,"pt" ,"qu" ,"rm" ,"rn" ,"ro" ,"ru" ,"rw" ,"sa" ,"sc" ,"sd" ,"se" ,"sg" ,"si" ,"sk" ,"sl" ,"sm" ,"sn" ,"so" ,"sq" ,"sr" ,"ss" ,"st" ,"su" ,"sv" ,"sw" ,"ta" ,"te" ,"tg" ,"th" ,"ti" ,"tk" ,"tl" ,"tn" ,"to" ,"tr" ,"ts" ,"tt" ,"tw" ,"ty" ,"ug" ,"uk" ,"ur" ,"uz" ,"ve" ,"vi" ,"vo" ,"wa" ,"wo" ,"xh" ,"yi" ,"yo" ,"za" ,"zh" ,"zu"],
+            "examples": ["de"]
+        },
+        "iri": {
+            "$id": "#/definitions/iri",
+            "$comment": "Format has to be in line with RFC 3987. Use for URLs.",
+            "type": "string",
+            "format": "iri",
+            "examples": [
+                "http://www.example.org/test.txt",
+                "mailto:John.Doe@example.com"
+            ]
+        },
+        "iris": {
+            "$id": "#/definitions/iris",
+            "$comment": "Format has to be in line with RFC 3987. Use for list of URLs.",
+            "type": "array",
+            "items": {"type": "string", "format": "iri"}
+        }, 
+        "platform": {
+            "$id": "#/definitions/platform",
+            "description": "Platform on which content was posted or user belongs to.",
+            "$comment": "Format has to be in line with the following specifications: lowercase and only alphabetic characters (e.g. tiktok, facebook).",
+            "type": "string",
+            "pattern": "^[a-z]+$"
+        },
+        "schemaVersion": {
+            "$id": "#/definitions/schemaVersion",
+            "type": "number",
+            "const": 0.1
+        },
+        "timestamp": {
+            "$id": "#/definitions/timestamp",
+            "description": "Date and time of retrieval.",
+            "$comment": "Format has to be in line with ISO 8601 ([-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]). UTC is preferred.",
+            "type": "string",
+            "format": "date-time",
+            "examples": ["2020-03-30T13:38:59Z"]
+        },
+        "verified": {
+            "$id": "#/definitions/verified",
+            "description": "Whether or not the relationship has been verified.",
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Inclusion",
+    "description": "Inclusion relationship.",
+    "type": "object",
+    "properties": {
+        "timestamp": {"$ref": "Base#/definitions/timestamp"},
+        "schemaVersion": {"$ref": "Base#/definitions/schemaVersion"}
+    },
+    "additionalProperties": false,
+    "required": [
+        "timestamp",
+        "schemaVersion"
+    ]
+}

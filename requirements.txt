@@ -1,0 +1,48 @@
+# formatter
+black==20.8b1 
+# linter
+flake8==3.8.3
+# Twitter OSINT tool 
+twint==2.1.20
+# Twitter API
+tweepy==3.9.0 
+# Instagram OSINT tool
+instaloader==4.5.3
+# VK API
+vk==2.0.2
+# environment variables
+python-decouple==3.1
+# data science
+numpy==1.17.2
+pandas==0.24.2
+scikit-learn==0.23.1 
+# NLP
+spacy==2.3.1
+# ISO standard countries
+pycountry==19.8.18
+# helper functions
+helpers==0.1
+# schema
+jsonschema==3.2.0 
+# geo data
+geopy==1.21.0 
+# plotting
+matplotlib==3.2.1
+seaborn==0.10.0
+geopandas==0.8.1 
+Shapely==1.7.1 
+descartes==1.1.0 
+# Neo4j
+neo4j==4.0.0b1 
+# progress bar
+tqdm==4.46.0 
+# validation of data
+validators==0.15.0 
+# URLs
+tldextract==2.2.2 
+# emojis
+emoji==0.5.4 
+# MongoDB
+pymongo==3.10.0
+# phone numbers
+phonenumbers==8.12.9 

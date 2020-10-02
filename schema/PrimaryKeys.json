@@ -1,0 +1,16 @@
+{
+    "Email": ["email"],
+    "Text": ["text"],
+    "Location": ["latitude", "longitude"],
+    "Media": ["url"],
+    "HashValue": ["hashValue"],
+    "Person": ["familyName", "givenName"],
+    "Phone": ["phone"],
+    "IpAddress": ["ip"],
+    "SocialMediaPost": ["id", "platform"],
+    "UserAccount": ["id", "platform"],
+    "Username": ["username"],
+    "Domain": ["domain"],
+    "Keyword": ["keyword"],
+    "Organization": ["name"]
+}

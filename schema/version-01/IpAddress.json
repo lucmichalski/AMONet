@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "IP Address",
+    "description": "Internet Protocol (IP) Addresses (IPv4 or IPv6).",
+    "$comment": "Atom",
+    "type": "object",
+    "oneOf": [
+        {
+            "$comment": "IPv4: Format has to be in line with RFC 2673, section 3.2.",
+            "properties": {
+                "ip": {
+                    "type": "string",
+                    "format": "ipv4",
+                    "examples": ["172.16.254.1"]
+                },
+                "version": {
+                    "type": "integer",
+                    "const": 4
+                },
+                "nodeId": {"$ref": "Base#/definitions/nodeId"},
+                "timestamp": {"$ref": "Base#/definitions/timestamp"},
+                "schemaVersion": {"$ref": "Base#/definitions/schemaVersion"}
+            },
+            "additionalProperties": false,
+            "required": [
+                "ip", 
+                "version",
+                "timestamp",
+                "schemaVersion",
+                "nodeId"
+            ]
+        },
+        {
+            "$comment": "IPv6: Format has to be in line with RFC 2373, section 2.2.",
+            "properties": {
+                "ip": {
+                    "type": "string",
+                    "format": "ipv6",
+                    "examples": ["2001:db8::8a2e:370:7334"]
+                },
+                "version": {
+                    "type": "integer",
+                    "const": 6
+                },
+                "nodeId": {"$ref": "Base#/definitions/nodeId"},
+                "timestamp": {"$ref": "Base#/definitions/timestamp"},
+                "schemaVersion": {"$ref": "Base#/definitions/schemaVersion"}
+            },
+            "additionalProperties": false,
+            "required": [
+                "ip", 
+                "version",
+                "timestamp",
+                "schemaVersion",
+                "nodeId"
+            ]
+        }
+    ]
+}

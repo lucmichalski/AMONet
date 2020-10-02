@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Text",
+    "description": "Text of e.g. SocialMediaPost",
+    "$comment": "Molecule",
+    "type": "object",
+    "properties": {
+        "caption": {
+            "$id": "#/properties/caption",
+            "type": "string"
+        },
+        "text": {
+            "$id": "#/properties/text",
+            "type": "string"
+        },
+        "inLanguage": {"$ref": "Base#/definitions/inLanguage"},
+        "wordsCount": {"$ref": "Base#/definitions/count"},
+        "timestamp": {"$ref": "Base#/definitions/timestamp"},
+        "schemaVersion": {"$ref": "Base#/definitions/schemaVersion"},
+        "nodeId": {"$ref": "Base#/definitions/nodeId"}
+    },
+    "additionalProperties": false,
+    "dependencies": {
+        "inLanguage": ["text"],
+        "wordsCount": ["text"]
+    },
+    "required": [
+        "text",
+        "timestamp",
+        "schemaVersion",
+        "nodeId"
+    ]
+}
