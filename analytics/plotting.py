@@ -4,6 +4,7 @@ import os
 import geopandas as gpd
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -27,6 +28,7 @@ def base_plotter(
     temporal: bool = False,
     rotate_ticks: bool = False,
     log_scale: bool = False,
+    less_ticks: bool = False,
     legend: List[str] = [],
     param_plot: dict = {},
     param_ax: dict = {},
@@ -69,6 +71,9 @@ def base_plotter(
     log_scale : bool
         Logarithmic scaling for axes?
 
+    less_ticks : bool
+        Showing less axis ticks?
+
     legend : list
         List including text(s) of legend that should be added to plot(s)
 
@@ -86,14 +91,14 @@ def base_plotter(
     plt.rcParams["font.family"] = "serif"
     plt.rcParams["font.serif"] = "Ubuntu"
     plt.rcParams["font.monospace"] = "Ubuntu Mono"
-    plt.rcParams["font.size"] = 14
-    plt.rcParams["axes.labelsize"] = 14
+    plt.rcParams["font.size"] = 22
+    plt.rcParams["axes.labelsize"] = 22
     plt.rcParams["axes.labelweight"] = "bold"
-    plt.rcParams["axes.titlesize"] = 14
-    plt.rcParams["xtick.labelsize"] = 12
-    plt.rcParams["ytick.labelsize"] = 12
-    plt.rcParams["legend.fontsize"] = 14
-    plt.rcParams["figure.titlesize"] = 16
+    plt.rcParams["axes.titlesize"] = 26
+    plt.rcParams["xtick.labelsize"] = 22
+    plt.rcParams["ytick.labelsize"] = 22
+    plt.rcParams["legend.fontsize"] = 22
+    plt.rcParams["figure.titlesize"] = 32
     plt.rcParams["axes.grid"] = True
 
     # create figure/axes
@@ -139,6 +144,11 @@ def base_plotter(
     # set labels
     ax.set_xlabel(x_label)
     ax.set_ylabel(y_label)
+
+    # adjust ticks
+    if less_ticks:
+        ax.xaxis.set_major_locator(ticker.MaxNLocator(5))
+        ax.xaxis.set_minor_locator(ticker.MaxNLocator(50))
 
     # add title
     if title:
