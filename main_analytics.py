@@ -255,6 +255,7 @@ if __name__ == "__main__":
             filename="usernames-centrality-top-10.png",
             bar=True,
             horizontal=True,
+            less_ticks=True,
             param_plot={"figsize": (10, 7)},
             param_ax={"facecolor": "cornflowerblue"},
         )
